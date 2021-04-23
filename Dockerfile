@@ -11,6 +11,7 @@ WORKDIR /usr/src/app
 RUN mkdir -p config
 RUN mkdir -p public
 RUN mkdir -p src
+RUN mkdir -p data
 COPY package*.json ./
 RUN npm install --unsafe-perm
 
