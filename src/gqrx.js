@@ -11,7 +11,8 @@ module.exports = async function (app) {
     port: parseInt(app.get('gqrx').port),
     timeout: parseInt(app.get('gqrx').timeout),
     negotiationMandatory: false,
-    debug: true
+    debug: true,
+    sendTimeout: 50
   }
 
   try {
