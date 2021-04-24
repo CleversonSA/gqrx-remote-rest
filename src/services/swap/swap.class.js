@@ -11,10 +11,6 @@ exports.Swap = class Swap {
   }
 
   async find (params) {
-    throw new MethodNotAllowed('Not implemented')
-  }
-
-  async get (id, params) {
     let filehandle;
     let content
     let gqrx_mode = 'error'
@@ -58,6 +54,10 @@ exports.Swap = class Swap {
       gqrx_mode,
       gqrx_status
     }
+  }
+
+  async get (id, params) {
+    throw new MethodNotAllowed('Not implemented')
   }
 
   async create (data, params) {

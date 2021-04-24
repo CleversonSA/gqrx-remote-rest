@@ -25,7 +25,14 @@ module.exports = async function (app) {
       await connection.connect(params)
       logger.info("GQRX - Reconnected")
     })
-        
+
+    connection.on('error', async () => {
+      logger.info("GQRX - Connection error, retrying")
+      await connection.end()
+      await connection.connect(params)
+      logger.info("GQRX - Reconnected")
+    })
+
     app.set('gqrxClient', connection)
   } catch (exception) {
     

@@ -1,11 +1,15 @@
-
+const gqrx = require('../../hooks/gqrx.js')
 
 module.exports = {
   before: {
     all: [],
-    find: [],
+    find: [
+      gqrx()
+    ],
     get: [],
-    create: [],
+    create: [
+      gqrx()
+    ],
     update: [],
     patch: [],
     remove: []

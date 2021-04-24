@@ -51,8 +51,6 @@ app.configure(services);
 // Set up event channels (see channels.js)
 app.configure(channels);
 
-// Set up the GQRX connection
-app.configure(gqrx);
 
 // Configure a middleware for 404s and the error handler
 app.use(express.notFound());
